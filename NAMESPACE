@@ -2,4 +2,3 @@
 
 export(moyenne)
 export(somme)
-export(variance)

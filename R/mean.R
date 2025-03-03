@@ -12,18 +12,3 @@
 moyenne<-function(x){
   sum(x, na.rm = TRUE)/length(x)
 }
-
-#' Variance
-#'
-#' @param x vector
-#'
-#' @returns a number
-#' @export
-#'
-#'
-#' @examples
-#' variance(iris$Sepal.Length)
-#' 
-variance<-function(x){
-   (sum(x**2)/(length(x))-(moyenne(x))**2)
-}
