@@ -2,7 +2,7 @@
 % Please edit documentation in R/uniComp.R
 \name{ptruncReg}
 \alias{ptruncReg}
-\title{estimates the regression coefficients in the tau-truncated Poisson regression model}
+\title{Estimates the regression coefficients in the tau-truncated Poisson regression model}
 \usage{
 ptruncReg(y, X, tau, tol = 1e-08, add_intercept = TRUE)
 }
@@ -17,6 +17,17 @@ ptruncReg(y, X, tau, tol = 1e-08, add_intercept = TRUE)
 
 \item{add_intercept}{a Boolean that specifies if an intercept should be added to the model or not}
 }
+\value{
+a list
+}
 \description{
-estimates the regression coefficients in the tau-truncated Poisson regression model
+Estimates the regression coefficients in the tau-truncated Poisson regression model
+}
+\examples{
+data("data/data.rda")
+ptruncReg(data$y,(data$y+1):ncol(data),tau, tol = 1e-8)
+
+
+
+
 }

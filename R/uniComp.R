@@ -1,5 +1,5 @@
 
-#' estimates the regression coefficients in the tau-truncated Poisson regression model
+#' Estimates the regression coefficients in the tau-truncated Poisson regression model
 #'
 #' @param y The vector of dependent (or response) variable
 #' @param X a data frame or matrix containing the explanatory variables for the regression
@@ -7,10 +7,16 @@
 #' @param tol the tolerance
 #' @param add_intercept a Boolean that specifies if an intercept should be added to the model or not
 #'
-#' @returns
-#' @export
-#'
+#' @returns a list
+#' @export 
+#' 
 #' @examples
+#' data("data/data.rda")
+#' ptruncReg(data$y,(data$y+1):ncol(data),tau, tol = 1e-8)
+#' 
+#' 
+#' 
+#' 
 ptruncReg = function(y,X,tau,tol=1e-8, add_intercept = TRUE) 
 {
   
@@ -24,7 +30,7 @@ ptruncReg = function(y,X,tau,tol=1e-8, add_intercept = TRUE)
   
   start = coefficients(glm(y~.-1, data = as.data.frame(X),family = poisson))
   
-  GrHess = function(b)
+  GrHess = function(b)                                      
   {
     N  = rep(0,nrow(X))
     D  = N; NN = N
