@@ -18,6 +18,6 @@ a number
 Title
 }
 \examples{
- somme(1,3)
+somme(1, 3)
 
 }
