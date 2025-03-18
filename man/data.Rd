@@ -3,23 +3,26 @@
 \docType{data}
 \name{data}
 \alias{data}
-\title{My Dataset}
+\title{Données de régression}
 \format{
-A data frame with ... rows and ... variables:
+Une base de données comportant 1000 lignes et 4 colonnes
+
 \describe{
-\item{x1 jusqu'à x3}{Les variables explicatives permettant de
-faire la régression de poisson}
-\item{y}{est la variable réponse ou la variable expliquée}
-...
+\item{x1}{Comporte des données sur un phénomène}
+\item{x2}{Comporte des données sur un phénomène}
+\item{x3}{Comporte des données sur un phénomène}
+\item{y}{Une variable de comptage}
+
 }
 }
 \source{
-Where the data comes from (if applicable).
+Les données sont issues d'une simulation
 }
 \usage{
 data
 }
 \description{
-A description of your dataset.
+Une base de données contenant une variable de comptage y et
+une matrice de variables explicative (x1, x2, x3)
 }
 \keyword{datasets}

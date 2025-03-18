@@ -18,16 +18,25 @@ ptruncReg(y, X, tau, tol = 1e-08, add_intercept = TRUE)
 \item{add_intercept}{a Boolean that specifies if an intercept should be added to the model or not}
 }
 \value{
-a list
+\code{$coeff }   : a matrix containing the maximum likelihood estimates of the regression coefficients
+
+\code{$var_cov}  : The matrix of variance covariance
+
+\code{$AIC}    : the value of the Akaike criterion
+
+\code{$BIC}      : the value of the BIC criterion
+
+\code{$n_iter}   : The number of iterations the algorithm runs until convergence
 }
 \description{
 Estimates the regression coefficients in the tau-truncated Poisson regression model
 }
+\details{
+Ici se trouve tout le detail de mon package
+}
 \examples{
-data("data/data.rda")
-ptruncReg(data$y,(data$y+1):ncol(data),tau, tol = 1e-8)
-
-
-
+ 
+# On éxécute la commande suivante  pour faire la régression
+ ptruncReg(data[,1], data[,-1], tau=8, tol=1e-8, add_intercept = TRUE)
 
 }
