@@ -29,13 +29,25 @@ ptruncReg(y, X, tau, tol = 1e-08, add_intercept = TRUE)
 \code{$n_iter}   : The number of iterations the algorithm runs until convergence
 }
 \description{
-Estimates the regression coefficients in the tau-truncated Poisson regression model
+\code{ptruncReg} : this function fits the tau-truncated
+unicomponent Poisson regression model and estimates the
+regression coefficients. Note that the tau-truncated Poisson
+regression model is used to analyze count data that are truncated at a known upper limit, denoted as tau.
 }
 \details{
-Ici se trouve tout le detail de mon package
+The package implements a unicomponent Poisson regression model, truncated
+at a known upper limit tau. The estimation is performed by maximizing
+the likelihood function. This model is particularly useful for analyzing
+count data with a ceiling effect.
+}
+\note{
+It is important to ensure that the count data and truncation values are correctly
+specified. The model assumes that the data follow a tau-truncated unicomponent
+Poisson distribution.
 }
 \examples{
- 
+
+ library(Ex1)
 # On éxécute la commande suivante  pour faire la régression
  ptruncReg(data[,1], data[,-1], tau=8, tol=1e-8, add_intercept = TRUE)
 
